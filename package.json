@@ -8,6 +8,8 @@
     "start": "wrangler dev",
     "test": "vitest",
     "typegen": "wrangler types",
+    "lint": "bunx @biomejs/biome check ./src/",
+    "lint:fix": "bunx @biomejs/biome check --write ./src/",
     "prepare": "lefthook install"
   },
   "devDependencies": {
