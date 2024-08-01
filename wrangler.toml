@@ -1,0 +1,16 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "younagi-contact-worker"
+main = "src/index.ts"
+compatibility_date = "2024-07-25"
+compatibility_flags = ["nodejs_compat"]
+
+# Ensure this worker will not be triggered by its URL
+workers_dev = false
+
+# Set the binding for Cloudflare's Email Routing (The "name" value becomes the prop accessible within this worker code)
+send_email = [{ name = "SEB" }]
+
+[vars]
+SITE_NAME = "younagi.dev"
+SENDER = { name = "younagi.dev Contact Email Sender", addr = "contact@younagi.dev" }
+RECIPIENT = { name = "younagi.dev Contact Email Recipient", addr = "contact@younagi.dev" }

@@ -1,0 +1,17 @@
+{
+  "name": "younagi-contact-worker",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "remoteUser": "dev",
+  "containerUser": "dev",
+  "init": true,
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
